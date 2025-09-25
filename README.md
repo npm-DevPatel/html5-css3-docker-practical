@@ -1,53 +1,67 @@
-# HTML5 Practical Assignment
+# HTML5 Practical with CSS and Docker
 
-This project demonstrates the use of HTML5 elements including semantic tags, media embedding (audio, video, captions), linking between multiple pages, and applying custom CSS styling. It is containerized with Docker for easy deployment.
+This project demonstrates modern HTML5 features styled with a Red Bull Racing Max Verstappen inspired theme. It also includes Docker support for containerized deployment.
 
-## Project Structure
+## Purpose
 
-html5-practical/
-├─ index.html
-├─ about.html
-├─ media.html
-├─ extras.html
-├─ assets/
-│ ├─ css/
-│ │ └─ styles.css
-│ ├─ images/ … (existing)
-│ ├─ audio/ … (existing)
-│ ├─ video/ … (existing)
-│ └─ captions/ … (existing)
-├─ Dockerfile
-├─ .dockerignore
-└─ README.md
+The site showcases semantic HTML5, media handling with captions, tables, and accessible micro-elements. The design integrates a consistent palette, type scale, and layout inspired by professional motorsport branding.
+
+## Pages
+
+index.html  
+Semantic structure, navigation, skip link, headings, blockquote, time, abbreviation, code, kbd, and samp.  
+
+about.html  
+Sections with a short history, unordered and ordered lists, and a definition list.  
+
+media.html  
+Picture element for responsive images, audio element, and video with WebVTT captions.  
+
+extras.html  
+Table with caption, thead, tbody, tfoot. Includes details and summary, dialog open for microcontent.  
+
+## Design Decisions
+
+Palette: Deep navy blue background with strong red accents, inspired by Oracle Red Bull Racing colors. White and light gray are used for text for high contrast.  
+Type scale: Larger headings for hierarchy, base font size 16px for readability.  
+Spacing: Consistent padding and margins applied to sections for clean structure.  
+Components: Navigation bar styled consistently across all pages, tables with borders and alternating row colors, and interactive elements styled with focus states.  
+
+## Accessibility Notes
+
+High contrast colors were chosen for readability.  
+Focus styles are visible for keyboard navigation.  
+Reduced motion is respected by avoiding animations that may cause distraction.  
+Semantic elements were used for structure, ensuring screen reader compatibility.  
+
+## Docker Instructions
+
+Build the image  
+docker build -t npmdevpatel/html5-practical .
+
+mathematica
+Copy code
+
+Run the container  
+docker run -d -p 8080:80 npmdevpatel/html5-practical
+
+css
+Copy code
+
+Push to Docker Hub  
+docker tag npmdevpatel/html5-practical npmdevpatel/html5-practical:latest
+docker push npmdevpatel/html5-practical:latest
 
 bash
 Copy code
 
-index.html → Main landing page  
-about.html → About section  
-media.html → Embedded audio, video, and captions  
-extras.html → Extra content and features  
-assets/css/styles.css → External stylesheet for styling  
-assets/images, assets/audio, assets/video, assets/captions → Media resources  
+## Deliverables
 
-## CSS Styling
+Live GitHub Pages URL  
+https://npm-devpatel.github.io/html5-practical-lab1/
 
-The project uses an external stylesheet located in assets/css/styles.css.  
+GitHub Repository Link  
+https://github.com/npm-devpatel/html5-practical
 
-It ensures separation of structure (HTML) and presentation (CSS).  
-Common styles include typography, colors, layout, and responsiveness.  
-To modify the appearance, edit styles.css.  
-
-## Docker Setup
-
-This project includes a Dockerfile and .dockerignore for containerized deployment.
-
-### Build the Docker Image
-```bash
-docker build -t html5-practical .
-Run the Container
-bash
-Copy code
-docker run -d -p 8080:80 html5-practical
-The site will be available at:
-http://localhost:8080
+Published Docker Image  
+https://hub.docker.com/r/npmdevpatel/html5-practical/tags
