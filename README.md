@@ -61,7 +61,7 @@ Live GitHub Pages URL
 https://npm-devpatel.github.io/html5-practical-lab1/
 
 GitHub Repository Link  
-https://github.com/npm-devpatel/html5-practical
+https://github.com/npm-devpatel/html5-css3-docker-practical/
 
 Published Docker Image  
 https://hub.docker.com/r/npmdevpatel/html5-practical/tags
