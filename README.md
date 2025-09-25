@@ -1,15 +1,53 @@
-# HTML5 Practical (No JS, No Forms)
+# HTML5 Practical Assignment
 
-This site demonstrates modern HTML5 features using a Red Bull Racing / Max Verstappen theme.  
-It covers semantics, media, captions, tables, and accessible micro-elements in a consistent design.
+This project demonstrates the use of HTML5 elements including semantic tags, media embedding (audio, video, captions), linking between multiple pages, and applying custom CSS styling. It is containerized with Docker for easy deployment.
 
-## Pages
+## Project Structure
 
-- **index.html** — Semantic structure, navigation, skip link, headings, blockquote, time, abbr, code/kbd/samp.  
-- **about.html** — Sections with short history, unordered and ordered lists, definition list.  
-- **media.html** — `<picture>` responsive image, audio element, and video with WebVTT captions.  
-- **extras.html** — Tables (caption/thead/tbody/tfoot), `<details>`, `<dialog open>` for microcontent.  
+html5-practical/
+├─ index.html
+├─ about.html
+├─ media.html
+├─ extras.html
+├─ assets/
+│ ├─ css/
+│ │ └─ styles.css
+│ ├─ images/ … (existing)
+│ ├─ audio/ … (existing)
+│ ├─ video/ … (existing)
+│ └─ captions/ … (existing)
+├─ Dockerfile
+├─ .dockerignore
+└─ README.md
 
-## Live Site
+bash
+Copy code
 
-**Live site:** https://npm-devpatel.github.io/html5-css3-docker-practical/
+index.html → Main landing page  
+about.html → About section  
+media.html → Embedded audio, video, and captions  
+extras.html → Extra content and features  
+assets/css/styles.css → External stylesheet for styling  
+assets/images, assets/audio, assets/video, assets/captions → Media resources  
+
+## CSS Styling
+
+The project uses an external stylesheet located in assets/css/styles.css.  
+
+It ensures separation of structure (HTML) and presentation (CSS).  
+Common styles include typography, colors, layout, and responsiveness.  
+To modify the appearance, edit styles.css.  
+
+## Docker Setup
+
+This project includes a Dockerfile and .dockerignore for containerized deployment.
+
+### Build the Docker Image
+```bash
+docker build -t html5-practical .
+Run the Container
+bash
+Copy code
+docker run -d -p 8080:80 html5-practical
+The site will be available at:
+http://localhost:8080
